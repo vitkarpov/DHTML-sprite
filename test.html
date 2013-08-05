@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sprite Demonstration</title>
+	<style>
+		#draw-container
+		{
+			width: 480px;
+			height: 480px;
+			border: 1px solid black;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div id="draw-container"></div>
+	<script src="http://yandex.st/jquery/1.9.1/jquery.min.js"></script>
+	<script src="DHTMLSprite.js"></script>
+	<script>
+		var params = {
+					images: 'images/scorpion-sprite.gif',
+					imagesWidth: 498,
+					width: 83,
+					height: 89,
+					$drawContainer: $('#draw-container')
+				},
+				sprite1 = DHTMLSprite(params),
+				i = 0;
+
+				setInterval(function() {
+					sprite1.changeImage(++i);
+				}, 200);
+
+	</script>
+</body>
+</html>
